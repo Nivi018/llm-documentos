@@ -4,8 +4,10 @@
   "type": "module",
   "scripts": {
     "capture": "node capture.mjs",
+    "capture:live": "node capture-live.mjs",
     "lint": "hyperframes lint",
-    "render": "hyperframes render --output ../docs/demo.mp4 --fps 30 --workers 2"
+    "render": "hyperframes render --output ../docs/demo.mp4 --fps 30 --workers 2",
+    "render:live": "hyperframes render -c live.generated.html --output ../docs/demo-flujo.mp4 --fps 30 --workers 2"
   },
   "devDependencies": {
     "gsap": "3.15.1",

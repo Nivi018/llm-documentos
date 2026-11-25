@@ -11,4 +11,5 @@ dist/
 *.tsbuildinfo
 demo/assets/
 demo/.hyperframes/
+demo/live.generated.html
 demo/renders/

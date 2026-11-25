@@ -17,11 +17,11 @@ El proyecto resuelve dos problemas: comprobar de dónde sale un dato y mantener 
 
 ## Demo en video
 
-[![Ver la demo: del PDF a una copia editable en Word](docs/demo-portada.jpg)](docs/demo.mp4)
+[![Ver la grabación continua: del PDF a una copia editable en Word](docs/demo-flujo-portada.jpg)](docs/demo-flujo.mp4)
 
-[Ver o descargar el MP4](docs/demo.mp4) · [Cómo reproducir la captura y el render](demo/README.md)
+[Ver o descargar la grabación continua](docs/demo-flujo.mp4) · [Ver el resumen por escenas](docs/demo.mp4) · [Cómo reproducir las demos](demo/README.md)
 
-Demo de 35 segundos con capturas reales de la app en modo simulado. Muestra cómo cargar un PDF ficticio, comprobar una cita, revisar un reemplazo y descargar el DOCX. Playwright ejecuta el flujo en Chromium; HyperFrames compone el video. No requiere una clave de IA.
+La grabación principal muestra el navegador **sin cortes**: Playwright mueve el cursor, carga un PDF ficticio, escribe la pregunta, abre la cita, revisa el reemplazo y descarga el DOCX. HyperFrames añade el marco al video de Chromium; no sustituye las interacciones por capturas. Se usa el modo simulado, sin clave de IA.
 
 ## Iniciar en Windows
 
