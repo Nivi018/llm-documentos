@@ -15,6 +15,14 @@ El proyecto resuelve dos problemas: comprobar de dónde sale un dato y mantener 
 
 [Instalación](#iniciar-en-windows) · [Ejemplos](#prueba-rápida) · [Proveedores](#configuración) · [Arquitectura](docs/arquitectura.md) · [API](docs/api.md) · [Pruebas](#comprobaciones)
 
+## Demo en video
+
+[![Ver la demo: del PDF a una copia editable en Word](docs/demo-portada.jpg)](docs/demo.mp4)
+
+[Ver o descargar el MP4](docs/demo.mp4) · [Cómo reproducir la captura y el render](demo/README.md)
+
+Demo de 35 segundos con capturas reales de la app en modo simulado. Muestra cómo cargar un PDF ficticio, comprobar una cita, revisar un reemplazo y descargar el DOCX. Playwright ejecuta el flujo en Chromium; HyperFrames compone el video. No requiere una clave de IA.
+
 ## Iniciar en Windows
 
 Requisitos: Git, [uv](https://docs.astral.sh/uv/) y Node.js 22.13+ (rama 22) o 24+. Clona el repositorio:

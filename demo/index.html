@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>LLM Documentos · Demostración</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #0b171b; color: #f1f9f6; font-family: "Segoe UI", system-ui, sans-serif; }
+    #stage { position: relative; overflow: hidden; width: 1280px; height: 720px; background: radial-gradient(ellipse at 85% 8%, #18433d, #0b171b 68%); }
+    .mast { position: absolute; top: 39px; left: 56px; right: 56px; display: flex; justify-content: space-between; color: #aee5ce; font: 600 16px Consolas, monospace; letter-spacing: .10em; }
+    .footer { position: absolute; bottom: 34px; left: 56px; right: 56px; display: flex; justify-content: space-between; border-top: 1px solid #41635b; padding-top: 15px; color: #acc6bf; font: 16px Consolas, monospace; }
+    .scene { position: absolute; inset: 112px 56px 95px; display: grid; grid-template-columns: 410px 1fr; gap: 40px; align-items: center; }
+    .scene.title { display: block; padding-top: 93px; }
+    .scene.title h1 { font-size: 86px; margin: 12px 0 18px; line-height: 1; letter-spacing: -.045em; }
+    .scene.title p { max-width: 780px; font-size: 30px; }
+    .eyebrow { color: #83e8ba; font: 600 18px Consolas, monospace; letter-spacing: .12em; text-transform: uppercase; }
+    h2 { margin: 12px 0 18px; font-size: 54px; letter-spacing: -.044em; line-height: 1.02; }
+    p { margin: 0; font-size: 24px; line-height: 1.45; color: #cce4dc; }
+    .capture { margin: 0; overflow: hidden; background: #fff; border-radius: 16px; box-shadow: 0 18px 60px #030a0caa; border: 1px solid #76a998; }
+    .capture img { display: block; width: 100%; max-height: 468px; object-fit: contain; }
+    .caption { padding: 12px 16px; background: #16312d; color: #d4f6eb; font: 15px Consolas, monospace; }
+    .badges { display: flex; gap: 12px; margin-top: 35px; }
+    .badges span { border: 1px solid #529880; color: #a8f2d3; padding: 8px 15px; border-radius: 20px; font: 17px Consolas, monospace; }
+    .track { position: absolute; bottom: 0; left: 0; width: 100%; height: 5px; background: #88ebbd; transform-origin: left center; }
+  </style>
+</head>
+<body>
+  <main id="stage" data-composition-id="llm-demo" data-start="0" data-duration="35" data-width="1280" data-height="720">
+    <header class="mast"><span>LLM DOCUMENTOS</span><span>DEMO DEL PRODUCTO</span></header>
+    <section id="opening" class="scene title clip" data-start="0" data-duration="4" data-track-index="0">
+      <div class="copy">
+        <span class="eyebrow">Asistente documental local</span>
+        <h1>Del PDF a una copia<br>editable en Word.</h1>
+        <p>Encuentra un dato, comprueba su origen y decide qué modificar antes de exportar.</p>
+        <div class="badges"><span>PDF</span><span>DOCX</span><span>TXT</span></div>
+      </div>
+    </section>
+    <section id="upload" class="scene clip" data-start="4" data-duration="5" data-track-index="0">
+      <div class="copy"><span class="eyebrow">01 / Carga</span><h2>Abre un documento.</h2><p>Cargamos un PDF ficticio y extraemos su texto en local.</p></div>
+      <figure class="capture"><img src="assets/01-carga.png" alt="Archivo biblioteca-horizonte.pdf seleccionado"><figcaption class="caption">PDF de ejemplo · control de carga real</figcaption></figure>
+    </section>
+    <section id="preview" class="scene clip" data-start="9" data-duration="5.5" data-track-index="0">
+      <div class="copy"><span class="eyebrow">02 / Lectura</span><h2>Navega por páginas.</h2><p>La vista previa conserva el número de página del original.</p></div>
+      <figure class="capture"><img src="assets/02-pagina.png" alt="Texto de la página 3, con el presupuesto"><figcaption class="caption">Página 3 · presupuesto y seguimiento</figcaption></figure>
+    </section>
+    <section id="query" class="scene clip" data-start="14.5" data-duration="6.5" data-track-index="0">
+      <div class="copy"><span class="eyebrow">03 / Consulta</span><h2>Encuentra el dato y su fuente.</h2><p>El presupuesto es USD 8.000. La cita lleva a la página 3.</p></div>
+      <figure class="capture"><img src="assets/03-consulta.png" alt="Pregunta y cita del presupuesto"><figcaption class="caption">Respuesta con cita literal · modo simulado</figcaption></figure>
+    </section>
+    <section id="review" class="scene clip" data-start="21" data-duration="7" data-track-index="0">
+      <div class="copy"><span class="eyebrow">04 / Revisión</span><h2>Compara antes de aplicar.</h2><p>Seleccionamos un reemplazo de USD 8.000 a USD 8.500 y revisamos el resultado.</p></div>
+      <figure class="capture"><img src="assets/04-revision.png" alt="Comparación del antes y después del reemplazo"><figcaption class="caption">Vista previa · solo se aplica lo que agregas</figcaption></figure>
+    </section>
+    <section id="export" class="scene clip" data-start="28" data-duration="7" data-track-index="0">
+      <div class="copy"><span class="eyebrow">05 / Exportación</span><h2>Descarga una copia.</h2><p>El Word contiene el cambio aprobado. El PDF original queda intacto.</p></div>
+      <figure class="capture"><img src="assets/05-exportacion.png" alt="Cambios acumulados y botón Descargar DOCX"><figcaption class="caption">Descarga verificada · documento-editado.docx</figcaption></figure>
+    </section>
+    <footer class="footer"><span>CAPTURA REAL DE LA APP · DATOS FICTICIOS</span><span>github.com/Nivi018/llm-documentos</span></footer>
+    <div class="track"></div>
+  </main>
+  <script>
+    const timeline = gsap.timeline({ paused: true });
+    for (const scene of document.querySelectorAll(".scene")) {
+      const start = Number(scene.dataset.start);
+      timeline.from(scene.querySelector(".copy"), { y: 18, opacity: 0, duration: .45, ease: "power2.out" }, start);
+      const capture = scene.querySelector(".capture");
+      if (capture) timeline.from(capture, { y: 14, opacity: 0, duration: .45, ease: "power2.out" }, start + .08);
+    }
+    timeline.fromTo(".track", { scaleX: 0 }, { scaleX: 1, duration: 35, ease: "none" }, 0);
+    window.__timelines = { "llm-demo": timeline };
+  </script>
+</body>
+</html>
