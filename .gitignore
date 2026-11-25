@@ -10,4 +10,5 @@ node_modules/
 dist/
 *.tsbuildinfo
 demo/assets/
+demo/.hyperframes/
 demo/renders/
